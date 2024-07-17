@@ -46,7 +46,10 @@ const Calculator: React.FC = () => {
       if (result === "") {
         return;
       }
-      const evalResult = evaluate(result);
+      let evalResult = evaluate(result);
+      if (String(evalResult) === 'Infinity') {
+        evalResult = 'Error 0';
+      }
       setResult(String(evalResult));
       setIsResultShown(true);
     } catch (error) {
