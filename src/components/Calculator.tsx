@@ -19,9 +19,6 @@ const Calculator: React.FC = () => {
       case "=":
         calculateResult();
         break;
-      case "C":
-        reset();
-        break;
       case "CA":
         reset();
         clearMemory();
@@ -32,10 +29,10 @@ const Calculator: React.FC = () => {
       case "M-":
         subtractFromMemory();
         break;
-      case "RM":
+      case "MR":
         recallMemory();
         break;
-      case "CM":
+      case "MC":
         clearMemory();
         break;
       default:
